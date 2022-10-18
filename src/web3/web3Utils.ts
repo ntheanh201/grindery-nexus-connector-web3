@@ -18,6 +18,7 @@ const CHAIN_MAPPING = {
   "eip155:1666600000": "harmony",
 
   "eip155:80001": "polygon_mumbai",
+  "eip155:25": `wss://cro.getblock.io/mainnet/?api_key=${process.env.GETBLOCK_API_KEY}`
 };
 class NewBlockSubscriber extends EventEmitter {
   private newBlockSubscription: null | Subscription<unknown> = null;
